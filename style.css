@@ -70,10 +70,110 @@ button{
 }
 button:hover {
     background: #3e5c4d;
+    transform: translateY(-2px);
+}
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+.button-container .btn{
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1rem;
+    background: #2d5a27;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s, transform 0.1s;
+}
+.button-container .btn:hover {
+    background: #1e3d1a;
+    transform: translateY(-1px);
 }
 #result {
     text-align: center;
     margin-top: 20px;
     font-weight: bold;
     color: #1b2a4a;
+}
+.positive {
+    color: green;
+}
+
+.negative {
+    color: red;
+}
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
+}
+:root {
+    --primary: #4f46e5;
+    --success: #16a34a;
+    --danger: #dc2626;
+    --background: #f4f6f9;
+}
+body.dark {
+    background: #121212 !important;
+    color: #ffffff !important;
+}
+body.dark .site-header {
+    background-color: transparent !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+body.dark .container {
+    background-color: #1e1e1e !important;
+    background: #1e1e1e !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+}
+/* turn all headings and labels to white in dark mode */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark label {
+    color: #ffffff !important;
+}
+body.dark input {
+    background: #2c2c2c !important;
+    color: #888 !important;
+    border: 1px solid #555 !important;
+}
+body.dark input::placeholder {
+    color: #aaaaaa;
+}
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto 15px auto;
+    padding: 10px;
+}
+.site-header .logo {
+    display: block;
+    height: 50px;
+   
+}
+
+#darkModeToggle.icon-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 5px;
+    width: 40px;
+    outline: none;
+}
+
+#darkModeToggle.icon-btn:hover {
+    transform: scale(1.15);
 }

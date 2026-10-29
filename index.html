@@ -9,8 +9,11 @@
 </head>
 
 <body>
+    <!--Header with Dark Mode Toggle-->
     <header class="site-header">
+        <div class="header-space"></div><!--Empty spacer to help center the logo-->
         <img src="images/FBC.png" alt="Family Budget Calculator Logo" class="logo">
+        <button id="darkModeToggle" class="icon-btn" onclick="toggleDarkMode()">🌙</button>
     </header>
 
     <div class="container">
@@ -53,14 +56,18 @@
 
             <label for="investment">Investment</label>
             <input type="number" id="investment" placeholder="Enter investment">
-            
+         
+    <div  class="button-container"> 
 
-
-        <button onclick="calculateBudget()">Calculate</button>
-
-        <h4 id="result"></h4>
-        <p id="total"></p>
+            <button onclick="calculateBudget()">Calculate</button>
+            <button id="clearBtn">Clear All</button>
+            <button id="exportBtn">Export Budget</button>
+            <button id="saveBtn">Save Report</button>
     </div>
+    <div id="toast" class="toast">Budget report saved successfully!</div>
+                <h4 id="result"></h4>
+                <p id="total"></p>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script src="script.js"></script>
 
